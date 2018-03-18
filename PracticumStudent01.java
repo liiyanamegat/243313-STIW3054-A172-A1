@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.mycompany.assignment01;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -18,15 +14,7 @@ import java.io.FileWriter;
 import java.io.Writer;
 
 import java.util.Iterator;/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author adamrustam
- */
+ 
 public class PracticumStudent01 {
     
     
@@ -39,7 +27,7 @@ public class PracticumStudent01 {
         
         try {
             
-            DataFormatter df = new DataFormatter();
+            DataFormatter dataf = new DataFormatter();
 
             FileInputStream excelFile = new FileInputStream(new File(FILE_NAME));
             Workbook workbook = new XSSFWorkbook(excelFile);
@@ -60,7 +48,7 @@ public class PracticumStudent01 {
                 while (cellIterator.hasNext()) {
 
                     Cell currentCell = cellIterator.next();
-                    String val = df.formatCellValue(currentCell);
+                    String val = dataf.formatCellValue(currentCell);
                     
                     System.out.print(val +"|");
                   
@@ -94,6 +82,5 @@ public class PracticumStudent01 {
     }
 
 }
-
 
 
